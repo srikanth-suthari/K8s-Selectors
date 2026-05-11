@@ -17,5 +17,5 @@ spec:
       image: nginx
   tolerations:
     - key: node
-      operation: "Exists"
+      operator: "Exists"
       effect: "NoSchedule"
