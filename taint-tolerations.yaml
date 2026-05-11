@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taints-tolerations
+spec:
+  replicas: 3
+  selectors:
+    matchLabels:
+      env: dev
+  template:
+    metadata:
+      name: taints-n-tolerations
+      labels:
+        env: dev
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+      toleration:
+        - key: env
+          operator: "Exists"
+          effect: "NoSchedule"
