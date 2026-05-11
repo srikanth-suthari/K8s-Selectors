@@ -16,7 +16,7 @@ spec:
       containers:
         - name: nginx
           image: nginx
-      toleration:
+      tolerations:
         - key: env
           operator: "Exists"
           effect: "NoSchedule"
