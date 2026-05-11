@@ -4,7 +4,7 @@ metadata:
   name: taints-tolerations
 spec:
   replicas: 3
-  selectors:
+  selector:
     matchLabels:
       env: dev
   template:
