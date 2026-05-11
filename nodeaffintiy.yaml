@@ -7,10 +7,11 @@ spec:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
-          - key: env
-            operator: In
-            values:
-              - dev
+          - matchExpressions:
+            - key: env
+              operator: In
+              values:
+                - dev
   containers:
     - name: nginx
       image: nginx
