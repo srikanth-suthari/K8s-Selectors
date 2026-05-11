@@ -3,9 +3,6 @@ kind: Pod
 metadata:
   name: node-affintiy
 spec:
-  containers:
-    - name: nginx
-      image: nginx
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
@@ -14,3 +11,6 @@ spec:
             operator: In
             values:
               - dev
+  containers:
+    - name: nginx
+      image: nginx
