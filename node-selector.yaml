@@ -8,6 +8,7 @@ spec:
   containers:
     - name: nginx
       image: nginx
+  # Here we should give the name to the node and "i'm giving name as ubuntu" in key and value pairs
   nodeSelector:
     # key: value
     name: ubuntu
