@@ -8,10 +8,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
           - matchExpressions:
-            - key: env
+            - key: node
               operator: In
               values:
-                - dev
+                - controlplane
   containers:
     - name: nginx
       image: nginx
