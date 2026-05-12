@@ -12,6 +12,7 @@ spec:
               operator: In
               values:
                 - controlplane
+                  node01
   containers:
     - name: nginx
       image: nginx
