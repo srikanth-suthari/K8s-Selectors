@@ -18,7 +18,7 @@ spec:
           image: nginx
       # Here we have tainted a node with a key and value pair
       # adding the tolerations to this pod to be scheduled on that node with some parameters like key and values
-      tolerations:
-        - key: env
-          operator: "Exists"
-          effect: "NoSchedule"
+      # tolerations:
+      #   - key: env
+      #     operator: "Exists"
+      #     effect: "NoSchedule"
