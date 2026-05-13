@@ -5,6 +5,7 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
+      # This soft rule schedules the pods even if the labels are missing and schedules the pods elsewhere in cluster
       preferredDuringSchedulingIgnoredDuringExecution:
         - weight: 100
           preference:
@@ -12,7 +13,7 @@ spec:
               - key: roboshop
                 operator: In
                 values:
-                  - node-5
+                  - node-5      # we do not have the node-5 in our cluster
   containers:
     - name: nginx
       image: nginx
