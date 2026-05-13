@@ -25,3 +25,6 @@ spec:
       containers:
         - name: nginx
           image: nginx
+
+# This command helps to find that "how many pods are running on each node"
+# kubectl get pods -A -o jsonpath='{range .items[*]}{.spec.nodeName}{"\n"}{end}' | sort | uniq -c
