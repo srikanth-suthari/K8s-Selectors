@@ -1,13 +1,27 @@
+# This is the 1st pod and it is scheduled first
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-affinity
+  name: pod-1
+  labels:
+    project: roboshop
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+---
+#This is the 2nd pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-2
   labels:
     project: roboshop
 spec:
   affinity:
     podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
+      # It checks for the pod labels and schedules near the 1st pod
         - labelSelector:
             matchLabels:
               project: roboshop
