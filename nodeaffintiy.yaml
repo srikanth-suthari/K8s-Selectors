@@ -8,11 +8,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
           - matchExpressions:
-            - key: node
+            - key: roboshop
               operator: In
               values:
-                - controlplane
-                  node01
+                - node01
   containers:
     - name: nginx
       image: nginx
