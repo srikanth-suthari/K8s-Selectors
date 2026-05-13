@@ -12,7 +12,7 @@ spec:
               - key: roboshop
                 operator: In
                 values:
-                  - node-3
+                  - node-5
   containers:
     - name: nginx
       image: nginx
