@@ -12,7 +12,7 @@ spec:
                 operator: In
                 values:
                   - node01
-      prefferedDuringShcedulingIgnoredDuringExecution:
+      prefferedDuringSchedulingIgnoredDuringExecution:
         - weight: 10
           preferences:
             matchExpressions:
