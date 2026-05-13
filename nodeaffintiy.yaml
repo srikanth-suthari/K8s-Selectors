@@ -17,7 +17,7 @@ spec:
     - name: nginx
       image: nginx
   # With affinity we can also use the taints and tolerations to schedule the pods
-  tolerations:
+  # tolerations:
     # - key: node
     #   operator: "Exists"
     #   effect: "NoSchedule"
