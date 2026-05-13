@@ -13,7 +13,7 @@ spec:
                 values:
                   - node01
       preferredDuringSchedulingIgnoredDuringExecution:
-        - weight: 10
+        - weight: 100
           preference:
             matchExpressions:
               - key: roboshop
