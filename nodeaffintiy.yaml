@@ -11,7 +11,7 @@ spec:
             - key: roboshop
               operator: In
               values:
-                - node01
+                - node-1
   containers:
     - name: nginx
       image: nginx
