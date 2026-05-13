@@ -12,12 +12,12 @@ spec:
                 operator: In
                 values:
                   - node01
-      prefferedDuringSchedulingIgnoredDuringExecution:
+      preferredDuringSchedulingIgnoredDuringExecution:
         - weight: 10
-          preferences:
+          preference:
             matchExpressions:
               - key: roboshop
-                operation: In
+                operator: In
                 values:
                   - node-3
   containers:
