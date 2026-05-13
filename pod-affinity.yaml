@@ -11,6 +11,7 @@ spec:
         - labelSelector:
             matchLabels:
               project: roboshop
+          topologyKey: kubernetes.io/hostname
   containers:
     - name: nginx
       image: nginx
