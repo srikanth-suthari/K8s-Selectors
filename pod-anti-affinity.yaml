@@ -1,0 +1,16 @@
+# This pod will not be scheduled near the pods which have the key as project and value as roboshop
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-3
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchLabels:
+              project: roboshop
+          topologyKey: kubernetes.io/hostname
+  containers:
+    - name: nginx
+      image: nginx
