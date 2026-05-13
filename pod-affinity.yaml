@@ -21,7 +21,7 @@ spec:
   affinity:
     podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
-      # It checks for the pod labels and schedules near the 1st pod
+      # It checks for the 1st pod labels and schedules near the 1st pod
         - labelSelector:
             matchLabels:
               project: roboshop
