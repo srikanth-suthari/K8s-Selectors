@@ -12,6 +12,14 @@ spec:
                 operator: NotIn
                 values:
                   - node-1
+              - key: roboshop
+                operator: NotIn
+                values:
+                  - node-2
+              - key: roboshop
+                operator: NotIn
+                values:
+                  - node-4
   containers:
     - name: nginx
       image: nginx
