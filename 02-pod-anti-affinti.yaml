@@ -1,0 +1,27 @@
+# This anti-affinity is with deployment for testing high availability
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: high-availability
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: frontend
+  template:
+    metadata:
+      name: high-avail
+      labels:
+        component: frontend
+    spec:
+      affinity:
+      # This will schedule the 3 pods into 3 different nodes at any cost
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  component: frontend
+              topologyKey: kubernetes.io/hostname
+      containers:
+        - name: nginx
+          image: nginx
